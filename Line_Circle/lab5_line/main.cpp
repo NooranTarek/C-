@@ -60,7 +60,7 @@ class Line
     Point point2;
 
 public:
-    Line() : point1(1, 2), point2(3, 4)
+    Line() : point1(20, 50), point2(100, 30)
     {
         cout << "Line constructor <<default>>" << endl;
     }
@@ -84,9 +84,10 @@ public:
     }
     void drawLine()
     {
-        initwindow(400, 300, "Graphics Window");
+        initwindow(600, 400, "Graphics Window");
         line(point1.getX(), point1.getY(), point2.getX(), point2.getY());
         //delay(5000);
+        getch();
         closegraph();
     }
 
@@ -113,6 +114,7 @@ public:
     {
         initwindow(400, 300, "Graphics Window");
         line(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+        getch();
         //delay(5000);
         closegraph();
     }
@@ -150,6 +152,7 @@ public:
         {
             initwindow(400, 300, "Graphics Window");
             line(startPoint->getX(), startPoint->getY(), endPoint->getX(), endPoint->getY());
+            getch();
             // delay(5000);
             closegraph();
         }
@@ -165,20 +168,20 @@ int main()
 {
     Line l1;
     l1.printLine();
-    // l1.drawLine();
+    l1.drawLine();
 
-    Point pointA(2, 3);
-    Point pointB(5, 6);
+   /* Point pointA(100, 200);
+    Point pointB(200, 200);
 
     Line2 l2;
     l2.print(pointA,pointB);
-    // l2.drawLine(pointA, pointB);
-
-    Point* s = new Point(1, 2);
-    Point* e = new Point(3, 4);
+     l2.drawLine(pointA, pointB);
+*/
+    /*Point* s = new Point(100, 22);
+    Point* e = new Point(30, 80);
 
     Line3 l3(s, e);
     l3.print();
-    // l3.drawLine();
+    l3.drawLine();*/
     return 0;
 }
