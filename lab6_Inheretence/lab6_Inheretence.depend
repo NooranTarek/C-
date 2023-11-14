@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1699998036 source:d:\iti 2023_2024\oopcourse\labs\lab6_inheretence\main.cpp
+	<iostream>
+	<graphics.h>
+	<vector>
+
